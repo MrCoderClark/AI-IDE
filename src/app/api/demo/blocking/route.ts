@@ -8,6 +8,11 @@ export async function POST() {
     // model: google("gemini-2.5-flash"),
     model: anthropic("claude-3-haiku-20240307"),
     prompt: "Write a vegetarian lasagna recipe for 4 people",
+    experimental_telemetry: {
+      isEnabled: true,
+      recordInputs: true,
+      recordOutputs: true,
+    },
   });
 
   return NextResponse.json({ response });
