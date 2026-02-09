@@ -18,16 +18,10 @@ export default defineSchema({
         v.literal("exporting"),
         v.literal("completed"),
         v.literal("failed"),
-        v.literal("cancelled"),
+        v.literal("canceled"),
       ),
     ),
     exportRepoUrl: v.optional(v.string()),
-    settings: v.optional(
-      v.object({
-        installCommand: v.optional(v.string()),
-        devCommand: v.optional(v.string()),
-      }),
-    ),
   }).index("by_owner", ["ownerId"]),
 
   files: defineTable({
