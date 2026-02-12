@@ -33,7 +33,6 @@ export const ProjectIdLayout = ({ children, projectId }: { children: React.React
                     </Allotment.Pane>
                 </Allotment>
             </div>
-            {children}
         </div>
     )
 }
